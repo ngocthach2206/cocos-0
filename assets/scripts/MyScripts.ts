@@ -29,6 +29,14 @@ export class MyScripts extends Component {
     items: Node[] = [];
 
     start() {
+        console.log("=== Bắt đầu chương trình ===");
+        this.viDuToanTuSoHoc();
+        // this.viDuToanTuSoSanh();
+        // this.viDuToanTuGan();
+        // this.viDuApDungGame();
+    }
+
+    viDuToanTuSoHoc() {
         // 1. TOÁN TỬ SỐ HỌC
         let a: number = 10;
         let b: number = 3;
@@ -51,6 +59,55 @@ export class MyScripts extends Component {
         c = a % b; //Phép chia lấy dư
         console.log("a % b = " + c); //1
 
+        c = this.congHaiSo(1, 10); //Gọi hàm cộng hai số
+        console.log("1 + 10 = " + c); //11
+
+        c = this.tinhToanPhucTap(5, 3); //Gọi hàm tính toán phức tạp
+        console.log("Kết quả tính toán phức tạp: " + c); //Kết quả cuối cùng
+    }
+
+    congHaiSo(a: number, b: number): number {
+        return a + b;
+    }
+
+    //Hàm thực hiện chuỗi các tính toán phức tạp
+    tinhToanPhucTap(a: number, b: number): number {
+        //Bước 1: Cộng hai số a và b
+        let buoc1 = a + b;
+        console.log("Bước 1 (a + b): " + buoc1);
+        
+        //Bước 2: Trừ đi tích của a và b
+        let buoc2 = buoc1 - (a * b);
+        console.log("Bước 2 (Bước 1 - (a * b)): " + buoc2);
+
+        //Bước 3: Cộng với bình phương của a
+        let buoc3 = buoc2 + (a * a);
+        console.log("Bước 3 (Bước 2 + (a * a)): " + buoc3);
+
+        //Bước 4: Trừ đi bình phương của b
+        let buoc4 = buoc3 - (b * b);
+        console.log("Bước 4 (Bước 3 - (b * b)): " + buoc4);
+
+        //Bước 5: Cộng với tổng của a và b nhân với 2
+        let buoc5 = buoc4 + ((a + b) * 2);
+        console.log("Bước 5 (Bước 4 + ((a + b) * 2)): " + buoc5);
+
+        //Bước 6: Trừ đi hiệu của a và b
+        let buoc6 = buoc5 - (a - b);
+        console.log("Bước 6 (Bước 5 - (a - b)): " + buoc6);
+
+        //Bước 7: Cộng với trung bình của a và b
+        let buoc7 = buoc6 + ((a + b) / 2);
+        console.log("Bước 7 (Bước 6 + ((a + b) / 2)): " + buoc7);
+
+        //Bước 8: Kết quả cuối cùng trừ đi 10
+        let ketQua = buoc7 - 10;
+        console.log("Kết quả cuối cùng (Bước 7 - 10): " + ketQua);
+
+        return ketQua;
+    }
+
+    viDuToanTuSoSanh() {
         // 2. TOÁN TỬ SO SÁNH
         let x: number = 5;
         let y: number = 10;
@@ -75,7 +132,9 @@ export class MyScripts extends Component {
 
         z = x != y; //Khác
         console.log("x != y = " + z); // true
+    }
 
+    viDuToanTuGan() {
         // 3. TOÁN TỬ GÁN
         let score: number = 100;
 
@@ -100,7 +159,9 @@ export class MyScripts extends Component {
 
         score--; //score = score - 1
         console.log("Điểm sau khi giảm: " + score); //70
+    }
 
+    viDuApDungGame() {
         // ÁP DỤNG VÀO GAME
         console.log(" === Áp dụng vào game ===");
 
