@@ -30,10 +30,11 @@ export class MyScripts extends Component {
 
     start() {
         console.log("=== Bắt đầu chương trình ===");
-        this.viDuToanTuSoHoc();
+        // this.viDuToanTuSoHoc();
         // this.viDuToanTuSoSanh();
         // this.viDuToanTuGan();
         // this.viDuApDungGame();
+        this.checkCat(100, 10);
     }
 
     viDuToanTuSoHoc() {
@@ -183,6 +184,48 @@ export class MyScripts extends Component {
 
     update(deltaTime: number) {
         
+    }
+
+    //VÍ DỤ VỀ IF VÀ FOR
+
+    //Ví dụ về IF: Kiểm tra mèo sống hay chết dựa vào máu
+    checkCat(currentHealth : number, damage : number) {
+        console.log("=== Check Cat ===");
+        console.log("Máu hiện tại: " + currentHealth);
+        console.log("Sát thương nhận vào: " + damage);
+
+        //Trừ máu
+        let healthAfterDamage = currentHealth - damage;
+        console.log("Máu sau khi bị tấn công: " + healthAfterDamage);
+
+        //Kiểm tra mèo còn sống không
+        if (healthAfterDamage > 0) {
+            console.log("Mèo còn sống!");
+            this.isCatAlive = true;
+        } else {
+            console.log("Mèo đã chết!");
+            this.isCatAlive = false;
+        }
+
+        return healthAfterDamage;
+    }
+
+    //Ví dụ về FOR
+    countToTen() {
+        console.log("=== Đếm từ 1 đến 10 ===");
+        for (let i = 1; i <= 10; i++) {
+            console.log("số thứ " + i);
+        }
+    }
+
+    //Ví dụ về FOR với mảng
+    printFruits() {
+        console.log("=== In ra danh sách trái cây ===");
+        const fruits = ["Táo", "Cam", "Chuối", "Dưa hấu", "Nho"];
+
+        for (let i = 0; i < fruits.length; i++) {
+            console.log("Trái cây thứ " + (i + 1) + ": " + fruits[i]);
+        }
     }
 }
 
