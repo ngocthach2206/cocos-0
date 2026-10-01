@@ -29,6 +29,7 @@ export class Dog extends Animal {
     start() {
         super.start(); //Gọi phương thức start() của lớp cha
         console.log(`${this.nameAnimal} đã sẵn sàng`);
+        //this.makeSound(); //Gọi phương thức makeSound() của lớp Dog
     }
 
     /**

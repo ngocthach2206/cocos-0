@@ -78,6 +78,8 @@ export class Cat extends Animal {
     /**
      * Getter và Setter
      */
+
+    // phải có get và set thì mới có thể truy cập được từ bên ngoài để thay đổi màu lông
     public getFurColor(): string {
         return this.furColor;
     }
@@ -86,6 +88,7 @@ export class Cat extends Animal {
         this.furColor = color;
     }
 
+    // không có setter vì muốn bảo vệ dữ liệu(Encapsulation) - chỉ có thể kiểm tra chứ không thể thay đổi trực tiếp từ bên ngoài
     public getLivesRemaining(): number {
         return this.livesRemaining;
     }
