@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, randomRange, randomRangeInt } from 'cc';
 const { ccclass, property } = _decorator;
 
 
@@ -19,12 +19,16 @@ export abstract class Animal extends Component {
     @property
     protected _energy: number = 100;
 
+    @property
+    protected weight: number = 0;
+
     /**
      * Constructor - Hàm khởi tạo
      */
 
     constructor() {
         super();
+        //this.randomWeight(); //khi gọi ở constructor thì khi tạo object sẽ có giá trị ngẫu nhiên cho weight
     }
 
     /**
@@ -32,7 +36,11 @@ export abstract class Animal extends Component {
      */
 
     start() {
+        this.randomWeight(); //khi gọi ở start thì khi component được load sẽ có giá trị ngẫu nhiên cho weight
+    }
 
+    protected randomWeight(): void {
+        this.weight = randomRangeInt(1, 70);
     }
 
     /**

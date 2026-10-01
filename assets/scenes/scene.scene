@@ -402,6 +402,7 @@
     "nameAnimal": "Chó",
     "_age": 0,
     "_energy": 100,
+    "weight": 66,
     "isTranined": false,
     "_id": "891QhwGTlPSJdq4Tj4qu2f"
   },
@@ -463,6 +464,7 @@
     "nameAnimal": "Chim",
     "_age": 0,
     "_energy": 100,
+    "weight": 43,
     "canFly": true,
     "wingSpan": 30,
     "isFlying": false,
@@ -526,6 +528,7 @@
     "nameAnimal": "Mèo",
     "_age": 0,
     "_energy": 100,
+    "weight": 2,
     "furColor": "Vàng",
     "livesRemaining": 9,
     "_id": "b6GCdgO6FBa4i2yey07fd2"
@@ -588,6 +591,7 @@
     "nameAnimal": "Chó 1",
     "_age": 0,
     "_energy": 100,
+    "weight": 32,
     "isTranined": false,
     "_id": "ddDFxN1UpDSoevdp6JR93q"
   },
@@ -649,6 +653,7 @@
     "nameAnimal": "Chó 2",
     "_age": 0,
     "_energy": 100,
+    "weight": 56,
     "isTranined": false,
     "_id": "65huUfsXNMopgyCYe3DuZC"
   },
@@ -710,6 +715,7 @@
     "nameAnimal": "Chó 3",
     "_age": 0,
     "_energy": 100,
+    "weight": 6,
     "isTranined": false,
     "_id": "57nBYJ1nNBMoJtwe+jRs9w"
   },
@@ -771,6 +777,7 @@
     "nameAnimal": "Chó 4",
     "_age": 0,
     "_energy": 100,
+    "weight": 2,
     "isTranined": false,
     "_id": "df02gucFZO67jyHQSDNGmV"
   },
@@ -832,6 +839,7 @@
     "nameAnimal": "Chó 5",
     "_age": 0,
     "_energy": 100,
+    "weight": 64,
     "isTranined": false,
     "_id": "4b80va7dNB47loZF6BCQMU"
   },
@@ -893,6 +901,7 @@
     "nameAnimal": "Chó 6",
     "_age": 0,
     "_energy": 100,
+    "weight": 40,
     "isTranined": false,
     "_id": "9cksl5+49BYYpkaPMGO2+E"
   },
@@ -954,6 +963,7 @@
     "nameAnimal": "Chó 7",
     "_age": 0,
     "_energy": 100,
+    "weight": 30,
     "isTranined": false,
     "_id": "682r6F+phDyoLjCvfUbkQE"
   },
