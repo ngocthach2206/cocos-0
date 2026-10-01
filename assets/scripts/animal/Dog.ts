@@ -19,7 +19,7 @@ export class Dog extends Animal {
 
     constructor() {
         super(); //Gọi constructor của lớp cha
-        this._name = "Chó"; //Gán giá trị cho thuộc tính _name của lớp cha
+        this.nameAnimal = "Chó"; //Gán giá trị cho thuộc tính _name của lớp cha
     }
 
     /**
@@ -28,7 +28,7 @@ export class Dog extends Animal {
 
     start() {
         super.start(); //Gọi phương thức start() của lớp cha
-        console.log(`${this._name} đã sẵn sàng`);
+        console.log(`${this.nameAnimal} đã sẵn sàng`);
     }
 
     /**
@@ -36,7 +36,7 @@ export class Dog extends Animal {
      */
 
     public makeSound(): void {
-        console.log(`${this._name} sủa: Gâu Gâu!`);
+        console.log(`${this.nameAnimal} sủa: Gâu Gâu!`);
     }
 
     /**
@@ -45,7 +45,7 @@ export class Dog extends Animal {
 
     public eat(food: string): void {
         super.eat(food); //Gọi phương thức eat() của lớp cha
-        console.log(`${this._name} vẫy đuôi vui vẻ!`);
+        console.log(`${this.nameAnimal} vẫy đuôi vui vẻ!`);
     }
 
     /**
@@ -59,17 +59,17 @@ export class Dog extends Animal {
 
     public fetch(): void {
         if (this.isTranined) {
-            console.log(`${this._name} chạy đi lấy bóng!`);
+            console.log(`${this.nameAnimal} chạy đi lấy bóng!`);
             this._energy -= 10; //Giảm năng lượng khi chạy
         } else {
-            console.log(`${this._name} chưa được huấn luyện!`);
+            console.log(`${this.nameAnimal} chưa được huấn luyện!`);
             this._energy -= 5; //Giảm năng lượng ít hơn khi không được huấn luyện
         }
     }
 
     public train(): void {
         this.isTranined = true;
-        console.log(`${this._name} đã được huấn luyện!`);
+        console.log(`${this.nameAnimal} đã được huấn luyện!`);
     }
 
     /**
