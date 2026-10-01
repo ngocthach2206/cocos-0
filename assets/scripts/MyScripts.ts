@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, randomRangeInt } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('MyScripts')
@@ -34,7 +34,10 @@ export class MyScripts extends Component {
         // this.viDuToanTuSoSanh();
         // this.viDuToanTuGan();
         // this.viDuApDungGame();
-        this.checkCat(100, 10);
+        //this.checkCat(100, 10);
+        //this.countToTen();
+        this.countTheCats();
+        this.printFruits();
     }
 
     viDuToanTuSoHoc() {
@@ -216,6 +219,18 @@ export class MyScripts extends Component {
         for (let i = 1; i <= 10; i++) {
             console.log("số thứ " + i);
         }
+    }
+
+    countTheCats() {
+        console.log("=== Đếm số lượng mèo ===");
+        let catCount = this.randomCats();
+        for (let i = 1; i <= catCount; i++) {
+            console.log("Mèo thứ " + i);
+        }
+    }
+
+    randomCats() {
+        return randomRangeInt(5, 10); //Trả về số lượng mèo ngẫu nhiên từ 5 đến 10
     }
 
     //Ví dụ về FOR với mảng
